@@ -29,10 +29,11 @@
     private async Task SendMessage()
     {
         _chatMessages.Add(new ChatMessage(ChatRole.User, _userMessage));
+        _userMessage = string.Empty;
+
         var response = await ChatService.GetChatCompletionsAsync(_deployName, _userMessage, _chatMessages);
         var completions = response.Value;
         _chatMessages.Add(new ChatMessage(completions.Choices[0].Message.Role, completions.Choices[0].Message.Content));
-        _userMessage = string.Empty;
     }
 
 }
