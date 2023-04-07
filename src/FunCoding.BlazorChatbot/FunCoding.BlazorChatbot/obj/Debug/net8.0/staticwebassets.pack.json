@@ -1,0 +1,113 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\obj\\Debug\\net8.0\\build-gz\\gcq8oqni.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\obj\\Debug\\net8.0\\scopedcss\\bundle\\FunCoding.BlazorChatbot.styles.css",
+      "PackagePath": "staticwebassets\\FunCoding.BlazorChatbot.styles.css"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\obj\\Debug\\net8.0\\service-worker-assets.js",
+      "PackagePath": "staticwebassets\\service-worker-assets.js"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\obj\\Debug\\net8.0\\service-worker\\service-worker.published.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\manifest.webmanifest",
+      "PackagePath": "staticwebassets\\manifest.webmanifest"
+    },
+    {
+      "Id": "C:\\dev\\BlazorChatbot\\src\\FunCoding.BlazorChatbot\\FunCoding.BlazorChatbot\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FunCoding.BlazorChatbot.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FunCoding.BlazorChatbot.props",
+      "PackagePath": "build\\FunCoding.BlazorChatbot.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FunCoding.BlazorChatbot.props",
+      "PackagePath": "buildMultiTargeting\\FunCoding.BlazorChatbot.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FunCoding.BlazorChatbot.props",
+      "PackagePath": "buildTransitive\\FunCoding.BlazorChatbot.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

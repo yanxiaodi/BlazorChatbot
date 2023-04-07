@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\FunCoding.BlazorChatbot.props" />
+</Project>
