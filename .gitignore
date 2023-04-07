@@ -1,0 +1,20 @@
+# .NET
+**/bin
+**/obj
+
+# Test reports
+**/TestResults
+**/Coverage
+**/coverage.json
+**/*.cobertura.xml
+**/coverage-report
+**/coverage.opencover.xml
+
+# JetBrains IDEs
+.idea
+*.DotSettings.user
+
+# Visual Studio
+**/.vs/
+
+# Miscellaneous
