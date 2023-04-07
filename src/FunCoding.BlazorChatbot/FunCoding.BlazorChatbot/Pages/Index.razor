@@ -1,7 +1,38 @@
-﻿@page "/"
-
+@page "/"
+@using Azure.AI.OpenAI
+@using FunCoding.BlazorChatbot.Services
+@inject IChatService ChatService
 <PageTitle>Index</PageTitle>
+<div>
+    <h1>Hello, ChatGPT!</h1>
+    @foreach (var message in _chatMessages)
+    {
+        <div>
+            <label>@message.Role</label>
+            <div>@message.Content</div>
+        </div>
+    }
+    <input @bind="_userMessage" />
+    <button @onclick="SendMessage">Send</button>
+</div>
+@code
+{
+    private string _userMessage = string.Empty;
+    private readonly List<ChatMessage> _chatMessages = new();
+    private readonly string _deployName = "gpt4-app";
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        _userMessage = string.Empty;
+    }
 
-<h1>Hello, world!</h1>
+    private async Task SendMessage()
+    {
+        _chatMessages.Add(new ChatMessage(ChatRole.User, _userMessage));
+        var response = await ChatService.GetChatCompletionsAsync(_deployName, _userMessage, _chatMessages);
+        var completions = response.Value;
+        _chatMessages.Add(new ChatMessage(completions.Choices[0].Message.Role, completions.Choices[0].Message.Content));
+        _userMessage = string.Empty;
+    }
 
-Welcome to your new app.
+}
