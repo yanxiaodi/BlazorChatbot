@@ -9,16 +9,16 @@
 
   <ItemGroup>
     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.5" />
+    <PackageReference Include="Blazorise.Bootstrap5" Version="1.2.2" />
+    <PackageReference Include="Blazorise.Components" Version="1.2.2" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.2.2" />
+    <PackageReference Include="Markdig" Version="0.31.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0-preview.2.23153.2" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0-preview.2.23153.2" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

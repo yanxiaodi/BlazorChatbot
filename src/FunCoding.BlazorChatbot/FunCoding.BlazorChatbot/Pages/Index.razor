@@ -1,25 +1,42 @@
 @page "/"
 @using Azure.AI.OpenAI
+@using FunCoding.BlazorChatbot.Models
 @using FunCoding.BlazorChatbot.Services
 @inject IChatService ChatService
 <PageTitle>Index</PageTitle>
-<div>
-    <h1>Hello, ChatGPT!</h1>
-    @foreach (var message in _chatMessages)
-    {
-        <div>
-            <label>@message.Role</label>
-            <div>@message.Content</div>
-        </div>
-    }
-    <input @bind="_userMessage" />
-    <button @onclick="SendMessage">Send</button>
-</div>
+<Div Height="Height.Is100">
+    <Div Height="Height.Is75">
+        <Heading Size="HeadingSize.Is1" Margin="Margin.Is4.FromTop">Hello, ChatGPT!</Heading>
+        <Blazorise.Components.ListView TItem="Message"
+                                       Data="_messages"
+                                       TextField="(item) => item.Content"
+                                       ValueField="(item) => item.Id.ToString()"
+                                       Mode="ListGroupMode.Static"
+                                       MaxHeight="100%"
+                                       Virtualize="true">
+            <ItemTemplate>
+                <Div Flex="Flex.InlineFlex.JustifyContent.Between" Width="Width.Is100">
+                    <Heading Margin="Margin.Is2.FromBottom">@context.Item.Role</Heading>
+                    <Small>@context.Item.DateTime.ToString("yyyy MMMM dd HH:mm:ss")</Small>
+                </Div>
+                <Paragraph Margin="Margin.Is2.FromBottom">@((MarkupString)context.Item.HtmlContent)</Paragraph>
+            </ItemTemplate>
+        </Blazorise.Components.ListView>
+    </Div>
+    <Div VerticalAlignment="VerticalAlignment.Bottom" Width="Width.Is100" Height="Height.Auto">
+        <MemoEdit Placeholder="Ask a question or send a message..." AutoSize
+                  @bind-Text="_userMessage"/>
+        <Div Flex="Flex.InlineFlex.JustifyContent.End" Width="Width.Is100">
+            <Button Color="Color.Primary" @onclick="SendMessage"
+                    Margin="Margin.Is2.FromTop">Send</Button>
+        </Div>
+    </Div>
+</Div>
 @code
 {
     private string _userMessage = string.Empty;
-    private readonly List<ChatMessage> _chatMessages = new();
-    private readonly string _deployName = "gpt4-app";
+    private readonly List<Message> _messages = new();
+    private readonly string _deployName = "Your deployName";
     protected override void OnInitialized()
     {
         base.OnInitialized();
@@ -28,12 +45,24 @@
 
     private async Task SendMessage()
     {
-        _chatMessages.Add(new ChatMessage(ChatRole.User, _userMessage));
+        _messages.Add(new Message(ChatRole.User, _userMessage, DateTime.Now, Guid.NewGuid()));
         _userMessage = string.Empty;
 
-        var response = await ChatService.GetChatCompletionsAsync(_deployName, _userMessage, _chatMessages);
+        var response = await ChatService.GetChatCompletionsAsync(_deployName, _userMessage, _messages);
         var completions = response.Value;
-        _chatMessages.Add(new ChatMessage(completions.Choices[0].Message.Role, completions.Choices[0].Message.Content));
+        _messages.Add(new Message(completions.Choices[0].Message.Role, completions.Choices[0].Message.Content, DateTime.Now, Guid.NewGuid()));
+        //var response = await ChatService.GetChatCompletionsStreamingAsync(_deployName, _userMessage, _chatMessages);
+        //using var stream = response.Value;
+        //Console.WriteLine("test");
+        //await foreach (var choice in stream.GetChoicesStreaming())
+        //{
+        //    await foreach (var message in choice.GetMessageStreaming())
+        //    {
+        //        _chatMessages.Add(new ChatMessage(message.Role, message.Content));
+        //        Console.WriteLine(message.Content);
+        //    }
+        //}
+
     }
 
 }

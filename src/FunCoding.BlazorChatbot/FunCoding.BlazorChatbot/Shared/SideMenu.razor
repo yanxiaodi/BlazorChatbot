@@ -1,0 +1,42 @@
+<Bar Mode="BarMode.VerticalInline"
+     CollapseMode="BarCollapseMode.Small"
+     Breakpoint="Breakpoint.Desktop"
+     NavigationBreakpoint="Breakpoint.Tablet"
+     ThemeContrast="ThemeContrast.Dark">
+    <BarBrand>
+        <BarItem>
+            <BarLink To="/">
+                <BarIcon IconName="IconName.Baby" />
+                OpenAI Chatbot
+            </BarLink>
+        </BarItem>
+    </BarBrand>
+    <BarMenu>
+        <BarStart>
+            <BarItem>
+                <BarLink To="/">
+                    <BarIcon IconName="IconName.Mail" />
+                    Chat
+                </BarLink>
+            </BarItem>
+            <BarItem>
+                <BarLink To="/fetchdata">
+                    <BarIcon IconName="IconName.Wifi" />
+                    FetchData
+                </BarLink>
+            </BarItem>
+            @*<BarItem>
+                <BarDropdown>
+                    <BarDropdownToggle>
+                        <BarIcon IconName="IconName.Edit" />
+                        Dropdown
+                    </BarDropdownToggle>
+                    <BarDropdownMenu>
+                        <BarDropdownItem>Action</BarDropdownItem>
+                        <BarDropdownItem>Another action</BarDropdownItem>
+                    </BarDropdownMenu>
+                </BarDropdown>
+            </BarItem>*@
+        </BarStart>
+    </BarMenu>
+</Bar>

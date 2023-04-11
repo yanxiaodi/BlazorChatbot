@@ -1,5 +1,6 @@
 using Azure;
 using Azure.AI.OpenAI;
+using FunCoding.BlazorChatbot.Models;
 
 namespace FunCoding.BlazorChatbot.Services;
 
@@ -22,17 +23,23 @@ public class ChatService : IChatService
         return _openAIClient.GetChatCompletionsAsync(deploymentOrModelName, chatCompletionsOptions);
     }
 
-    public Task<Response<StreamingChatCompletions>> GetChatCompletionsStreamingAsync(string deploymentOrModelName, string message, List<ChatMessage> historyMessages)
+    public Task<Response<StreamingChatCompletions>> GetChatCompletionsStreamingAsync(string deploymentOrModelName, string message, List<Message> historyMessages)
     {
         var options = GetChatCompletionsOptions(message, historyMessages);
         return _openAIClient.GetChatCompletionsStreamingAsync(deploymentOrModelName, options);
     }
 
-    private static ChatCompletionsOptions GetChatCompletionsOptions(string message, List<ChatMessage> historyMessages)
+    public Task<Response<ChatCompletions>> GetChatCompletionsAsync(string deploymentOrModelName, string message, List<Message> historyMessages)
+    {
+        var options = GetChatCompletionsOptions(message, historyMessages);
+        return _openAIClient.GetChatCompletionsAsync(deploymentOrModelName, options);
+    }
+
+    private static ChatCompletionsOptions GetChatCompletionsOptions(string message, List<Message> historyMessages)
     {
         var messages = new List<ChatMessage> { new(ChatRole.User, message) };
         messages.AddRange(historyMessages);
-        var options = new ChatCompletionsOptions()
+        var options = new ChatCompletionsOptions
         {
             Temperature = 0,
             MaxTokens = 350,
@@ -46,11 +53,5 @@ public class ChatService : IChatService
         }
 
         return options;
-    }
-
-    public Task<Response<ChatCompletions>> GetChatCompletionsAsync(string deploymentOrModelName, string message, List<ChatMessage> historyMessages)
-    {
-        var options = GetChatCompletionsOptions(message, historyMessages);
-        return _openAIClient.GetChatCompletionsAsync(deploymentOrModelName, options);
     }
 }
