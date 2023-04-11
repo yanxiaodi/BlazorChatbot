@@ -17,7 +17,7 @@ Note: the messages are not stored in the database. If you restart the project, t
 ## Future work
 
 - [ ] Add a database to store the messages.
-- [ ] Add a UI framework.
+- [x] Add a UI framework.
 - [ ] Support multiple models.
 - [ ] Support model configuration.
 - [ ] Message management.
